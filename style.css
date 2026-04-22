@@ -1,0 +1,287 @@
+@font-face {
+  font-family: Raleway;
+  src: url(/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Raleway;
+}
+nav {
+  padding-bottom: 0;
+}
+nav #year {
+  text-align: right;
+}
+section {
+  padding:  3rem;
+  height: auto;
+}
+
+.hero .contents {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero h1 {
+  font-size: 7rem;
+  font-weight: 500;
+}
+.hero .heroText {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.hero .heroText span:nth-child(2) {
+  font-size: 2rem;
+}
+.lastLine {
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lastLine .name {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.lastLine .line {
+  flex: 1;
+  margin: 0 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.lastLine button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid black;
+  transition: 0.3s cubic-bezier(0.63, 0.01, 0.32, 1);
+}
+.hero .lastLine button:hover {
+  transform: rotate(90deg);
+}
+.lastLine button img {
+  width: 3rem;
+}
+.about {
+  margin: 3rem 0 0 0;
+}
+.about .lastLine, .resume .lastLine {
+  width: 100%;
+  margin: 8rem 0 0 0;
+}
+.about .boxes {
+  width: 80%;
+  display: flex;
+  gap: 8rem;
+}
+.aboutText h1 {
+  margin-bottom: 4rem;
+  font-size: 5rem;
+  font-weight: 500;
+}
+.about .boxes .aboutText div {
+  display: flex;
+  gap: 8rem;
+}
+.about .boxes .aboutText div span {
+  text-align: justify;
+}
+.about .boxes .portraitImage {
+  width: 25rem;
+  filter: grayscale(1);
+  transition: 0.3s cubic-bezier(0.63, 0.01, 0.32, 1);
+}
+.about .boxes .portraitImage:hover {
+  filter: grayscale(0);
+}
+.about .lastLine button, .resume .lastLine button {
+  position: relative;
+  rotate: 90deg;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.3s cubic-bezier(0.63, 0.01, 0.32, 1);
+}
+.about .lastLine button img,.resume .lastLine button img {
+  filter: invert(0);
+}
+.about .lastLine button::after, .resume .lastLine button::after  {
+  content: "";
+  background-color: black;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 50%;
+  right: 50%;
+  width: 0%;
+  height: 00%;
+  z-index: -1;
+  transition: 0.3s cubic-bezier(0.63, 0.01, 0.32, 1);
+
+}
+
+.about .lastLine button:hover img, .resume .lastLine button:hover img {
+  filter: invert(1);
+  transition: 0.3s cubic-bezier(0.63, 0.01, 0.32, 1);
+}
+.about .lastLine button:hover::after, .resume .lastLine button:hover::after {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  transition: 0.3s cubic-bezier(0.63, 0.01, 0.32, 1);
+}
+
+.about .lastLine button img, .resume .lastLine button img {
+  width: 2rem;
+}
+
+.project {
+  position: relative;
+}
+
+.projectLink {
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+}
+
+
+.resume .year, .resume .project .time {
+  font-size: .7rem;
+}
+
+.resume .box {
+  margin: 5rem 0 3rem 0;
+  display: grid;
+  
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 8rem ;
+
+  grid-template-areas: 
+    'education experience hardskills'
+    'education experience hardskills'
+    'languages experience hobbies'
+    'languages softwares hobbies'
+    'languages softwares contacts'
+  ;
+}
+
+.resume .box h2 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.resume .box h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: .5rem 0;
+}
+.resume .box h4 {
+  font-weight: 500;
+}
+.resume .box .edu {
+  margin-bottom: 2rem;
+}
+.resume .box .edu .courseName {
+  margin: .5rem 0;
+}
+.resume .box .edu .location {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resume .box .hardSkills > div{
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 0 2rem;
+}
+
+
+.resume .box p {
+  font-size: .9rem;
+  line-height: 1.2xrem;
+}
+
+.resume .box > div {
+  border-bottom: 1px solid gray;
+  width: 100%;
+  /* padding: ; */    
+  /* background: gray; */
+  display: inline-block; 
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+.resume .box .experience .project {
+  margin-bottom: 3rem;
+}
+.resume .box * p {
+  color: rgba(0, 0, 0, 0.800);
+}
+
+
+.box .languages p {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: .7rem;
+  /* justify-content: space-between; */
+}
+.box .languages .line {
+  flex: 1;
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #00000089 0 3px,
+    transparent 1px 6px
+  );
+}
+
+.box .softwares div {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.box .softwares img {
+  width: 2.5rem;
+  filter: grayscale(100%) brightness(0);
+}
+
+.box .hobbies div, .box .hardSkills div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
+  font-size: .9rem;
+}
+.box .contacts img{
+  width: 1rem;
+}
+
+.box .contacts div{
+  font-size: .9rem;
+  margin-bottom: 1rem;
+  /* color: black; */
+  display: grid;
+  gap: 1.5rem 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+.box .contacts div span {
+  width: max-content;
+}
+.box .contacts div span a {
+  color: black;
+
+}

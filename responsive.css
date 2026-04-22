@@ -1,0 +1,107 @@
+@media only screen and (min-width: 1450px) and (max-width: 1600px) {
+  .about .boxes {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1450px) {
+  section {
+    padding: 3rem;
+  }
+  .hero .contents > h1 {
+    font-size: 6rem;
+  }
+  .about .boxes {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Have to change grid layout of resume */
+}
+@media only screen and (max-width: 650px) {
+  .about .boxes .aboutText div {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+
+
+
+
+/* ===============================
+   RESUME – RESPONSIVE GRID FIX
+================================ */
+
+/* Large tablets / small laptops */
+@media only screen and (max-width: 1200px) {
+  .resume .box {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 4rem;
+
+    grid-template-areas:
+      "education experience"
+      "education experience"
+      "hardskills experience"
+      "languages hobbies"
+      "softwares contacts";
+  }
+  .resume .box > div {
+    padding-bottom: 1rem;
+  }
+}
+
+/* Tablets */
+@media only screen and (max-width: 900px) {
+  .resume .box {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    grid-template-areas:
+      "education"
+      "experience"
+      "hardskills"
+      "languages"
+      "softwares"
+      "hobbies"
+      "contacts";
+  }
+
+  .resume .box h2 {
+    font-size: 2rem;
+  }
+
+  .resume .box h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .resume {
+    padding: 3rem 1.5rem;
+    padding-bottom: 0rem;
+  }
+
+  .resume .box {
+    margin: 3rem 0 3rem 0;
+  }
+
+  .resume .box p {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+  }
+
+  .box .contacts div {
+    grid-template-columns: 1fr;
+  }
+
+  .box .softwares div {
+    gap: 1.5rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .box .softwares img {
+    width: 2.5rem;
+  }
+}

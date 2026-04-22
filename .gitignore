@@ -1,0 +1,20 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node (only if you add later)
+node_modules/
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Editor files
+.vscode/
+.idea/
+
+# Large media (optional)
+*.mp4
+*.zip
