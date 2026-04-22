@@ -17,7 +17,7 @@ console.log(projects)
 projects.forEach((e) => {
     let btn = document.createElement('button')
     let img = document.createElement('img')
-    img.src = '/icons/open_in_new.svg'
+    img.src = 'icons/open_in_new.svg'
     img.alt = 'openNewTab'
     btn.appendChild(img)
 
