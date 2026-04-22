@@ -1,5 +1,9 @@
 let yearBox = document.getElementById("year");
-yearBox.textContent = new Date().getFullYear()
+const months = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+yearBox.textContent = `${months[new Date().getMonth()]} - ${new Date().getFullYear()}`
 
 // let experience = document.getElementById('experiance').children
 // console.log(experience)
