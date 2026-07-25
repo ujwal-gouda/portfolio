@@ -10,7 +10,7 @@ items.forEach((item) => {
     let btn = document.createElement("button");
     let img = document.createElement("img");
 
-    img.src = "/icons/open_in_new.svg";
+    img.src = "icons/open_in_new.svg";
     img.alt = "Open in new tab";
 
     btn.appendChild(img);
