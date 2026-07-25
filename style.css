@@ -149,7 +149,7 @@ section {
   position: relative;
 }
 
-.projectLink {
+.projectLink, .experienceLink {
   background-color: transparent;
   text-decoration: none;
   color: black;
@@ -168,11 +168,11 @@ section {
   gap: 1rem 8rem ;
 
   grid-template-areas: 
-    'education experience hardskills'
-    'education experience hardskills'
-    'languages experience hobbies'
-    'languages softwares hobbies'
-    'languages softwares contacts'
+    'education projects hardskills'
+    'education projects hardskills'
+    'experiences projects hobbies'
+    'experiences softwares hobbies'
+    'experiences softwares contacts'
   ;
 }
 
@@ -192,10 +192,12 @@ section {
 .resume .box .edu {
   margin-bottom: 2rem;
 }
-.resume .box .edu .courseName {
+.resume .box .edu .courseName,
+.resume .box .experience .internshipName {
   margin: .5rem 0;
 }
-.resume .box .edu .location {
+.resume .box .edu .location,
+.resume .box .experience .location {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -222,9 +224,11 @@ section {
   margin-bottom: 1rem;
   box-sizing: border-box;
 }
-.resume .box .experience .project {
+.resume .box .experiences .experience,
+.resume .box .projects .project {
   margin-bottom: 3rem;
 }
+
 .resume .box * p {
   color: rgba(0, 0, 0, 0.800);
 }
