@@ -33,17 +33,18 @@
 ================================ */
 
 /* Large tablets / small laptops */
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
   .resume .box {
     grid-template-columns: 1fr 1fr;
     gap: 2rem 4rem;
 
     grid-template-areas:
-      "education experience"
-      "education experience"
-      "hardskills experience"
-      "languages hobbies"
-      "softwares contacts";
+      "education experiences"
+      "education experiences"
+      "projects projects"
+      "hardskills hobbies"
+      "softwares softwares"
+      "contacts contacts";
   }
   .resume .box > div {
     padding-bottom: 1rem;
@@ -58,9 +59,10 @@
 
     grid-template-areas:
       "education"
-      "experience"
+      "experiences"
+      "projects"
       "hardskills"
-      "languages"
+      /* "languages" */
       "softwares"
       "hobbies"
       "contacts";

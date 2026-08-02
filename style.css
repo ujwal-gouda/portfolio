@@ -273,10 +273,16 @@ section {
 .box .contacts img{
   width: 1rem;
 }
+/* .box .hardSkills div:last-child, 
+.box .softwares div:last-child, 
+.box .hobbies div:last-child, 
+.bod .contacts div:last-child{
+  margin-bottom: 1.5rem;
+} */
 
 .box .contacts div{
   font-size: .9rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   /* color: black; */
   display: grid;
   gap: 1.5rem 2rem;
